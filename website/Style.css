@@ -1,0 +1,35 @@
+
+p,ul,ol,h2
+{color:black}
+
+h1,
+a{ color: rgb(119, 119, 255);}
+
+.item1 {grid-area:overskrift;}
+.item2 {grid-area:kage;}
+.item3 {grid-area:glasur;}
+.item4 {grid-area:arbejdsmetode;}
+.links {grid-area:links;}
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'overskrift overskrift' 
+    'kage glasur'  
+    'arbejdsmetode arbejdsmetode'
+    'links links';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+@media only screen and (max-witdth: 40em) {
+    .grid-container {
+    background-color: rgb(255, 0, 0);
+    grid-template-areas:
+    'overksrift'
+    'kage'
+    'glasur'
+    'arbejdsmetode'
+    'links';
+    }
+}
