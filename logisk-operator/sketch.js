@@ -3,5 +3,8 @@ function setup() {
 }
 
 function draw() {
+  background(220);
 
+let x = mouseX;
+let y = mouseY;
 }
