@@ -2,5 +2,5 @@
 Velkommen til :D
  
 - [Mine hjemmesider](website/)
-- [Stickman] (stickman/)
-- [Logisk-operator] (logisk-operator/)
+- [Stickman](stickman/)
+- [Logisk-operator](logisk-operator/)
