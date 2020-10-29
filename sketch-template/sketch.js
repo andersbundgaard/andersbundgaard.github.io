@@ -20,9 +20,6 @@ function draw() {
   circleSize = square(x, y, 55)
   }
   
-
-
-
   circle (x,y,circleSize)
 
 }
