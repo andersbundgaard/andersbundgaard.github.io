@@ -4,14 +4,25 @@ function setup() {
 
 function draw() {
   background (220);
-  ellipse (150,60,45,45)//hovede;
-  ellipse (140,55,7,7)//højre øje;
-  ellipse (160,55,7,7)//venstre øje;
-  line (150,82,150,250)//krop; 
-  line (150,100,80,55)//venstre arm;
-  line (150,100,220,55)// højre arm;
-  line (150,250,100,300)//venstre ben;
-  line (150,250,200,300)//højre ben;
-  arc(150, 70, 15, 15, 0, PI + QUARTER_PI, CHORD)//mund;
-}
+  
+  line (0,200,400,200)
+  line (200,0,200,400)
 
+  let x = mouseX;
+  let y = mouseY;
+
+  let circleSize = 50
+
+  let xIslarge = x > 200
+  let yIslarge = x > 200
+  
+  if (xIslarge) {
+  circleSize = square(x, y, 55)
+  }
+  
+
+
+
+  circle (x,y,circleSize)
+
+}
