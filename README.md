@@ -3,4 +3,4 @@ Velkommen til :D
  
 - [Mine hjemmesider](website/)
 - [Stickman](stickman/)
-- [sketch-template](sketch-template/)
+- [Sketch-template](sketch-template/)
