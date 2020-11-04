@@ -14,12 +14,15 @@ function draw() {
   let circleSize = 50
 
   let xIslarge = x > 200
-  let yIslarge = x > 200
+  let yIslarge = y > 200
   
-  if (xIslarge) {
-  circleSize = square(x, y, 55)
+  if (xIslarge && !yIslarge) {
+  circleSize = square(x-55/2, y-55/2, 55)
   }
-  
+  if(!xIslarge && yIslarge) {
+    circleSize = square(x-55/2, y-55/2, 55)
+  }
+
   circle (x,y,circleSize)
 
 }
