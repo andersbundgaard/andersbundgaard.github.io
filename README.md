@@ -4,3 +4,4 @@ Velkommen til :D
 - [Mine hjemmesider](website/)
 - [Stickman](stickman/)
 - [Logiske-operator](logisk-operator/)
+- [Node-ting](node/)
