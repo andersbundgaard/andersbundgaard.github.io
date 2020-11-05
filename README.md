@@ -3,4 +3,4 @@ Velkommen til :D
  
 - [Mine hjemmesider](website/)
 - [Stickman](stickman/)
-- [Sketch-template](sketch-template/)
+- [Logiske-operator](logisk-operator/)
