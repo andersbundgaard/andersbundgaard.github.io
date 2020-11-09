@@ -11,7 +11,6 @@ let i=0;
 while (i<20){
     i+=2
     console.log(i);
-if(i<20 == true)(i<30)
 }
 
 //3-tabelle
