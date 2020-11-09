@@ -17,7 +17,7 @@ function draw() {
   let yIslarge = y > 200
   
   if (xIslarge && !yIslarge || !xIslarge && yIslarge) {
-  circleSize = square(x-55/2, y-55/2, 55)
+  circleSize = square(x-55/2, y-55/2, 55); 
   }
 
   circle (x,y,circleSize)
