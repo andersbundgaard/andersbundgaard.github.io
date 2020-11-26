@@ -1,21 +1,17 @@
 function setup() {
-  createCanvas(400,400);
-  fill(133, 18, 50);
-  stroke(10, 10, 500);
-  strokeWeight(2);
-}
-
-function draw() {
-  background(50);
+    createCanvas(400, 400);
+  }
   
-  // De tre cirkler med streger mellem
-  circle (200, 20, 10);
-  circle (50, 350, 10);
-  circle (350, 350, 10);
+  function draw() {
+    background(220);
+    
+    // cirkler og linjer
+    circle (200,75,7);
+    circle (100, 300, 7);
+    circle (300, 300, 7);
+    line (200, 75, 300, 300);
+    line (200, 75, 100, 300);
 
-  //streger mellem de tre punkter
-  line (200, 20, 50, 350);
-  line (200, 20, 350, 350);
-   
-
-}
+    
+    const a = map(mouseX, 0, width, )
+  }
