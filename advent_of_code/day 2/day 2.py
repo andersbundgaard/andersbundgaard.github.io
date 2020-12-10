@@ -1,6 +1,9 @@
 lines = [
+'13-17 s: ssssssssssssgsssj',
+'7-9 p: pnlzhcppvl',
+'5-6 z: zzbwrv',
+'7-15 w: wwwwwcqwwwwwwwww',
 ]
-
 
 def load_data(fileName):
     global lines
@@ -26,18 +29,9 @@ def problemOne():
                 return
 
 def problemTwo():
-    global lines
-    for a in lines:
-        for b in lines:
-            for c in lines:
-                x = int(a)
-                y = int(b)
-                z = int(c)
-                if 2020 == x + y + z:
-                    print (x,y,z,x+y+z,x*y*z)
-                    return
+    pass
 
 if __name__ == "__main__":
-    load_data("day1-input.txt")
+    load_data("day2-input.txt")
     problemOne()
-    problemTwo()
+    #problemTwo()
