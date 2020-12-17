@@ -35,3 +35,4 @@ if __name__ == "__main__":
     load_data("day2-input.txt")
     problemOne()
     #problemTwo()
+    
