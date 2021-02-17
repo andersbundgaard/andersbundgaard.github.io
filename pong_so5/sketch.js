@@ -1,11 +1,8 @@
-
 let ball_1;
-let ball_2;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   ball_1 = new Ball_1 (width/2, height/2);
-  ball_2 = new Ball_2 (width/2, height/2);
 }
 
 
@@ -19,8 +16,4 @@ function draw() {
   ball_1.move_1();
   ball_1.show_1();
 
-  
-  //bold 2 bliver tegnet
-  ball_2.move_2();
-  ball_2.show_2();
 }
