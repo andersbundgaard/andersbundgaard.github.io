@@ -1,4 +1,3 @@
-//ball 1
 class Ball_1 {
     
     //laver positionen for vektoren 
@@ -8,7 +7,8 @@ class Ball_1 {
         this.pos_1 = createVector(x, y);
         
     // lav en vektor med retnignen den bevæger sig i
-        this.vel_1 = createVector(0,1);
+        this.vel_1 = createVector(2,0);
+
     }
     
     //får bolden til at bevæge sig
@@ -24,8 +24,7 @@ class Ball_1 {
 
     //tegner bolden
         show_1(){
-        stroke(255, 100);
-        strokeWeight(2);
-        ellipse (this.pos_1.x, this.pos_1.y, 40, 40); 
+        fill(255)
+        ellipse (this.pos_1.x, this.pos_1.y, 20, 20); 
     }
 } 
