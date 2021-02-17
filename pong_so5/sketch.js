@@ -1,6 +1,8 @@
+let diameter = 20;
+var y_1 = 350;
+var y_2 = 350;
 let ball_1;
-let y_1 = 350;
-let y_2 = 350;
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -19,15 +21,18 @@ function draw() {
   
 }    
 
-//får venstre bat til at bevæge sig
 function keyPressed(){
-  if (keyCode ==40){
-    y_1 ++}
-  else if (keyCode == 38){
-    y_1 --
-  } 
+  //får venstre bat til at bevæge sig
+     if (keyCode == 40){
+      y_1 ++}
+      else if (keyCode == 38){
+      y_1 --} 
+
+  // får højre bat til at bevæge sig
   if (keyCode ==83){
     y_2 ++}
-    else if (keyCode == 87){
-      y_2 --}
+  else if (keyCode == 87){
+    y_2 --}
+
+
 }

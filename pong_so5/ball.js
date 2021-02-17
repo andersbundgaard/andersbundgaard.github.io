@@ -25,6 +25,6 @@ class Ball_1 {
     //tegner bolden
         show_1(){
         fill(255)
-        ellipse (this.pos_1.x, this.pos_1.y, 20, 20); 
+        ellipse (this.pos_1.x, this.pos_1.y, diameter, diameter); 
     }
 } 
