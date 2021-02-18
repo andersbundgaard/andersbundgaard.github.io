@@ -10,7 +10,7 @@ function setup() {
   var y_1 = height/2;
   var y_2 = height/2;
   ball = new Ball (width/2, height/2);
-  bat_1 = createVector (width-diameter/2, y_2);
+  bat_1 = createVector (width+diameter, y_2);
   bat_2 = createVector (-diameter,y_1);
 }
 
@@ -35,7 +35,13 @@ function draw() {
     score_h ++
     console.log(score_h);
   }
+
+  //viser score
+  textSize (24);
+  text(score_v, width/2+100,40);
+  text(score_h, width/2-100,40);
 }
+
 
 function keyPressed(){
   if (bat_1.y || bat_2.y < Width){
