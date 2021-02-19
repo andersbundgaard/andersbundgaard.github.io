@@ -7,7 +7,7 @@ class Ball {
         this.pos = createVector(x, y);
         
     // lav en vektor med retnignen den bevæger sig i
-        this.vel = createVector(-2,0);
+        this.vel = createVector(0,20);
 
     }
     

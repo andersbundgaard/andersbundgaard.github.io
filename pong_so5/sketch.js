@@ -24,17 +24,18 @@ function draw() {
   ellipse(bat_1.x, bat_1.y, diameter*7, diameter*7);  
   ellipse(bat_2.x, bat_2.y, diameter*7, diameter*7);
 
-  //giver venstre point hvis bolden kommer bag baglinjen
-  if (ball.pos.x > width){
-    score_v ++
-    console.log(score_v);
-  }
+  //får bolden til at bounce på top og bund
+  if (ball.pos.y-diameter < 0 ){
+    ball.vel.y = -ball.vel.y}
+    else if(ball.pos.y+diameter > height){
+      ball.vel.y = -ball.vel.y
+    }
 
-  // giver højre point hvis bolden kommer bag baglinje
-  if (ball.pos.x < 0){
-    score_h ++
-    console.log(score_h);
-  }
+  //giver point hvis bolden kommer bag baglinjen
+  if (ball.pos.x > width){
+    score_v ++}
+    else if (ball.pos.x < 0){
+      score_h ++}
 
   //viser score
   textSize (24);
