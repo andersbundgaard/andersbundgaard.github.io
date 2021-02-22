@@ -1,5 +1,5 @@
 class Ball {
-    
+
     //laver positionen for vektoren 
         constructor(x,y) {
     
@@ -7,7 +7,7 @@ class Ball {
         this.pos = createVector(x, y);
         
     // lav en vektor med retnignen den bevæger sig i
-        this.vel = createVector(0,20);
+        this.vel = createVector(3,0);
 
     }
     

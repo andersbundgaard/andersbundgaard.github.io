@@ -24,29 +24,28 @@ function draw() {
   ellipse(bat_1.x, bat_1.y, diameter*7, diameter*7);  
   ellipse(bat_2.x, bat_2.y, diameter*7, diameter*7);
 
-  //får bolden til at bounce på top og bund
-  if (ball.pos.y-diameter < 0 ){
-    ball.vel.y = -ball.vel.y}
-    else if(ball.pos.y+diameter > height){
-      ball.vel.y = -ball.vel.y
-    }
+  // //får bolden til at bounce på top og bund
+  // if (ball.pos.y-diameter < 0 ){
+  //   ball.vel.y = -ball.vel.y}
+  //   else if(ball.pos.y+diameter > height){
+  //     ball.vel.y = -ball.vel.y
+  //   }
 
   //giver point hvis bolden kommer bag baglinjen
-  if (ball.pos.x > width){
+  if (ball.pos.x + diameter > width){
     score_v ++}
-    else if (ball.pos.x < 0){
+    else if (ball.pos.x + diameter < 0){
       score_h ++}
-
-  //viser score
-  textSize (24);
-  text(score_v, width/2+100,40);
-  text(score_h, width/2-100,40);
-}
+    //viser score
+    textSize (24);
+    text(score_v, width/2+100,40);
+    text(score_h, width/2-100,40);   
+    console.log (ball.vel.x) 
+    }
 
 
 function keyPressed(){
   if (bat_1.y || bat_2.y < Width){
-    console.log(bat_2.y);
     //får venstre bat til at bevæge sig 
     if (keyCode == 40){
       bat_1.y +=50}
@@ -58,8 +57,5 @@ function keyPressed(){
       bat_2.y +=50}
     else if ( keyCode == 87){
       bat_2.y -=50}
-  }
-  else if (bat_1.y ||bat_2.y > Width){
-    console.log(1)
   }
 }
