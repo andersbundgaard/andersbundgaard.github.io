@@ -1,16 +1,14 @@
-class Ball {
-
-    //laver positionen for vektoren 
-        constructor(x,y) {
-    
+function Ball() {
+let x = width/2;
+let y = height/2;
     //Lav en vektor med koordinater 
         this.pos = createVector(x, y);
         
     // lav en vektor med retnignen den bevæger sig i
-        this.vel = createVector(-3,0);}
+        this.vel = createVector(-3,0);
     
     //får bolden til at bevæge sig
-        move() {
+        this.move = function() {
         
     // lægger de to vektorer sammen
         this.pos.add(this.vel);
@@ -21,10 +19,10 @@ class Ball {
     }
 
     //tegner bolden
-        show(){
-        fill(80);
-        stroke(255);
-        strokeWeight(4);
+        this.show = function(){
+        fill('red');
+        stroke(250);
+        strokeWeight(2);
         ellipse (this.pos.x, this.pos.y, diameter, diameter); 
     }
 } 
