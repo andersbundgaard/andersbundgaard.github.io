@@ -11,37 +11,33 @@ function setup() {
   var y_2 = height/2;
   ball = new Ball (width/2, height/2);
   bat_1 = createVector (width+diameter, y_2);
-  bat_2 = createVector (-diameter,y_1);
-}
+  bat_2 = createVector (-diameter,y_1);}
 
 function draw() {
   background(0);
   
-  //bold 1 bliver tegnet
+  //bolden bliver tegnet
   ball.move();
   ball.show();
 
   ellipse(bat_1.x, bat_1.y, diameter*7, diameter*7);  
   ellipse(bat_2.x, bat_2.y, diameter*7, diameter*7);
 
-  // //får bolden til at bounce på top og bund
-  // if (ball.pos.y-diameter < 0 ){
-  //   ball.vel.y = -ball.vel.y}
-  //   else if(ball.pos.y+diameter > height){
-  //     ball.vel.y = -ball.vel.y
-  //   }
-
   //giver point hvis bolden kommer bag baglinjen
   if (ball.pos.x + diameter > width){
-    score_v ++}
+    score_v ++
+    ball.pos = createVector(width/2, height/2);}
+
     else if (ball.pos.x + diameter < 0){
-      score_h ++}
+      score_h ++
+      ball.pos = createVector(width/2, height/2);
+    }
+
     //viser score
     textSize (24);
     text(score_v, width/2+100,40);
     text(score_h, width/2-100,40);   
-    console.log (ball.vel.x) 
-    }
+    console.log (ball.vel.x)}
 
 
 function keyPressed(){
