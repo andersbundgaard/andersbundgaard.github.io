@@ -5,7 +5,7 @@ let y = height/2;
         this.pos = createVector(x, y);
         
     // lav en vektor med retnignen den bevæger sig i
-        this.vel = createVector(-3,0);
+        this.vel = createVector(3,0);
     
     //får bolden til at bevæge sig
         this.move = function() {

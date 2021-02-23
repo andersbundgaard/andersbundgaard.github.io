@@ -14,7 +14,6 @@ function setup() {
 
 function draw() {
   background(0);
-  
   //bolden bliver tegnet
   ball.move();
   ball.show();
@@ -26,14 +25,12 @@ function draw() {
   //giver point hvis bolden kommer bag baglinjen
   if (ball.pos.x + diameter > width){
     score_v ++
-    ball.pos = createVector(width/2, height/2);}
-
+    ball.pos = createVector(width/2, height/2);
+  }
     else if (ball.pos.x + diameter < 0){
       score_h ++
-      ball.pos = createVector(width/2, height/2);}
-    
-  if (ball.pos + diameter == bat_1.x && bat_1.y + diameter){
-    console.log (1)}
+      ball.pos = createVector(width/2, height/2);
+    }
   
   //viser score
   textSize (24);
