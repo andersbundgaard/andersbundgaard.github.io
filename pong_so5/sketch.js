@@ -47,7 +47,7 @@ function draw() {
 
   //får bolden til at bounce på bat 2
   var ballBat2 = p5.Vector.dist(ball.pos, bat_2.pos);
-  if (ballBat2 < diameter + (diameter*3.5)){
+  if (ballBat2 < diameter/2 + (diameter*3.5)){
       if (ball.vel.y == 0){
         let ballRandom2 = random(-10,10);
         ball.vel = createVector(5,ballRandom2);
@@ -72,13 +72,13 @@ function draw() {
 
   //giver point hvis bolden kommer bag baglinjen og resetter bolden
   if (ball.pos.x + diameter > width){
-    score_v ++
+    score_h ++
     ball.pos = createVector(width/2, height/2);
     ball.vel = createVector(7,0);
     ball.vel.limit(7);
   }
     else if (ball.pos.x + diameter < 0){
-      score_h ++
+      score_v ++
       ball.pos = createVector(width/2, height/2);
       ball.vel = createVector(-7,0);
       ball.vel.limit(7); 
