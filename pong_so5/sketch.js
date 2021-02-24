@@ -4,17 +4,14 @@ let bat_2;
 let ball;
 var score_v = 0;
 var score_h = 0;
+let angle;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   ball = new Ball (width/2, height/2);
   bat_1 = new Bat_1 (width, height/2);
   bat_2 = new Bat_2 (0, height/2);
-  // var a = (bat_1.pos.y - ball.pos.y) / (bat_1.pos.x - ball.pos.x);
-  // c = -1/a
-  // C_v = createVector(1,c);
-  // var angle = ball.pos.angleBetween(bat_1.pos);
-  // console.log(angle);
+  
 }
 
 function draw() {
@@ -26,12 +23,13 @@ function draw() {
   bat_1.show();
   //bat _2 bliver tegner (til venstre)
   bat_2.show();
-  
-  
+
   //får bold til at bounce på bat 1
-  var ballBat1 = p5.Vector.dist(ball.pos, bat_1.pos);
-  if (ballBat1 < diameter + (diameter*3.5)){
-      console.log('HIT');
+  var Vdist = p5.Vector.dist(ball.pos, bat_1.pos); //afstand mellem bold og bat
+    if (Vdist < diameter/2 + (diameter*3.5)){
+      // bat_1.pos.reflect(ball.pos);
+      // let angle = bat_1.pos.angleBetween(ball.pos);
+      // console.log(angle);
 
       if (ball.vel.y == 0){
         let ballRandom1 = random(-10,10);
@@ -50,7 +48,6 @@ function draw() {
   //får bolden til at bounce på bat 2
   var ballBat2 = p5.Vector.dist(ball.pos, bat_2.pos);
   if (ballBat2 < diameter + (diameter*3.5)){
-      console.log('HIT')
       if (ball.vel.y == 0){
         let ballRandom2 = random(-10,10);
         ball.vel = createVector(5,ballRandom2);
