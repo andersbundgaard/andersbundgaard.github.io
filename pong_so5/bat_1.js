@@ -2,9 +2,6 @@ function Bat_1 () {
     let x = width + 20;
     let y = height/2;
 
-    //laver positionen for vektoren 
-        // constructor(x,y) {
-
     //Lav en vektor med koordinater 
         this.pos = createVector(x,y);
     

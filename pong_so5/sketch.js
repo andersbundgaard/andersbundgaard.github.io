@@ -10,6 +10,11 @@ function setup() {
   ball = new Ball (width/2, height/2);
   bat_1 = new Bat_1 (width, height/2);
   bat_2 = new Bat_2 (0, height/2);
+  // var a = (bat_1.pos.y - ball.pos.y) / (bat_1.pos.x - ball.pos.x);
+  // c = -1/a
+  // C_v = createVector(1,c);
+  // var angle = ball.pos.angleBetween(bat_1.pos);
+  // console.log(angle);
 }
 
 function draw() {
@@ -21,15 +26,65 @@ function draw() {
   bat_1.show();
   //bat _2 bliver tegner (til venstre)
   bat_2.show();
+  
+  
+  //får bold til at bounce på bat 1
+  var ballBat1 = p5.Vector.dist(ball.pos, bat_1.pos);
+  if (ballBat1 < diameter + (diameter*3.5)){
+      console.log('HIT');
 
-  //giver point hvis bolden kommer bag baglinjen
+      if (ball.vel.y == 0){
+        let ballRandom1 = random(-10,10);
+        ball.vel = createVector(-5,ballRandom1);
+      }
+      if (ball.vel.y > 0){
+        let ballRandom3 = random(0,10);
+        ball.vel = createVector(-5,ballRandom3);
+      }
+      if (ball.vel.y < 0){
+        let ballRandom4 = random(0,-10);
+        ball.vel = createVector(-5,ballRandom4);
+      }
+  }
+
+  //får bolden til at bounce på bat 2
+  var ballBat2 = p5.Vector.dist(ball.pos, bat_2.pos);
+  if (ballBat2 < diameter + (diameter*3.5)){
+      console.log('HIT')
+      if (ball.vel.y == 0){
+        let ballRandom2 = random(-10,10);
+        ball.vel = createVector(5,ballRandom2);
+      }
+      if (ball.vel.y > 0){
+        let ballRandom5 = random(0,10);
+        ball.vel = createVector(5,ballRandom5);
+      }
+      if (ball.vel.y < 0){
+        let ballRandom6 = random(0,-10);
+        ball.vel = createVector(5,ballRandom6);
+      }
+    }
+
+
+  // bounce på top og bund
+  if (ball.pos.y-diameter < 0 ){
+    ball.vel.y = -ball.vel.y}
+    else if(ball.pos.y+diameter > height){
+      ball.vel.y = -ball.vel.y
+    }
+
+  //giver point hvis bolden kommer bag baglinjen og resetter bolden
   if (ball.pos.x + diameter > width){
     score_v ++
     ball.pos = createVector(width/2, height/2);
+    ball.vel = createVector(7,0);
+    ball.vel.limit(7);
   }
     else if (ball.pos.x + diameter < 0){
       score_h ++
       ball.pos = createVector(width/2, height/2);
+      ball.vel = createVector(-7,0);
+      ball.vel.limit(7); 
     }
   
   //viser score
