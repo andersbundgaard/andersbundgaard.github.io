@@ -1,21 +1,23 @@
 function Bat_1 () {
+//Variabler
 let x = width + 110;
 let y = height/2;
 
-    //Lav en vektor med koordinater 
-        this.pos = createVector(x,y);
+//Laver en vektor med koordinater x og y 
+this.pos = createVector(x,y); 
     
-    //tegner bat_1
-         this.show = function(){
-            fill ('blue')
-        ellipse(this.pos.x, this.pos.y, diameter*15, diameter*15);  
+//Tegner bat_1
+this.show = function(){
+     fill ('blue') //Fylder højre bat med blå farve
+     ellipse(this.pos.x, this.pos.y, diameter*15, diameter*15); //Tegner højre bat 
     }
     
-    this.collision_1 = function(){
-    const distance = this.pos.dist(ball.pos) //afstand mellem bold og bat
+//Collision mellem bold og højre bat
+this.collision_1 = function(){
+     const distance = this.pos.dist(ball.pos) //Laver konstant med afstand mellem bold og højre bat
          if (distance < diameter/2 + (diameter*7.5)){
-         const surfaceNormla = p5.Vector.sub(this.pos, ball.pos);
-         ball.vel.reflect(surfaceNormla);
+         const midtnormal = p5.Vector.sub(this.pos, ball.pos); //Laver kmidtnormal ud fra højre bat og bolden
+         ball.vel.reflect(midtnormal); //Reflektere bolden omkring midtnormalen
         }
     }
 }

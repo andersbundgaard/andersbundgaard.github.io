@@ -1,27 +1,28 @@
 function Ball() {
+//Variabler
 let x = width/2;
 let y = height/2;
 
-        //Lav en vektor med koordinater 
-            this.pos = createVector(x, y);
+//Laver en vektor med koordinater 
+this.pos = createVector(x, y);
                 
-        // lav en vektor med retnignen den bevæger sig i
-            this.vel = createVector(7,0);
+// Laver en vektor med retnignen bolden bevæger sig i
+this.vel = createVector(7,0);
 
 
-    //får bolden til at bevæge sig
-        this.move = function() {
-        
-    // lægger de to vektorer sammen
-        this.pos.add(this.vel);
-        this.vel.limit(7);
+//Får bolden til at bevæge sig
+this.move = function() {
+
+    // Lægger positionen og hastigheden sammen så bolden bevæger sig
+    this.pos.add(this.vel);
+    this.vel.limit(7); // Begrænsning for hvor hurtigt bolden kna bevæge sig
     }
 
-    //tegner bolden
-        this.show = function(){
-        fill('red');
-        stroke(250);
-        strokeWeight(2);
-        ellipse (this.pos.x, this.pos.y, diameter, diameter); 
+//Tegner bolden
+this.show = function(){
+     fill('red'); //Giver bolden rød farve
+     stroke(250); //Giver bolden og battene hvid kant
+     strokeWeight(2); //Tykkelsen på kanten
+     ellipse (this.pos.x, this.pos.y, diameter, diameter); //Tenger bolden
     }
 } 
