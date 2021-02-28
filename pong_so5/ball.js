@@ -9,7 +9,6 @@ this.pos = createVector(x, y);
 // Laver en vektor med retnignen bolden bevæger sig i
 this.vel = createVector(7,0);
 
-
 //Får bolden til at bevæge sig
 this.move = function() {
 

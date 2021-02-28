@@ -16,8 +16,8 @@ this.show = function(){
 this.collision_1 = function(){
      const distance = this.pos.dist(ball.pos) //Laver konstant med afstand mellem bold og højre bat
          if (distance < diameter/2 + (diameter*7.5)){
-         const midtnormal = p5.Vector.sub(this.pos, ball.pos); //Laver kmidtnormal ud fra højre bat og bolden
-         ball.vel.reflect(midtnormal); //Reflektere bolden omkring midtnormalen
+         const surfaceNormal = p5.Vector.sub(this.pos, ball.pos); //Laver normal ud fra højre bat og bolden
+         ball.vel.reflect(surfaceNormal); //Reflektere bolden omkring normal
         }
     }
 }
